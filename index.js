@@ -1,5 +1,8 @@
 import http from 'http';
-import { get, post, put, remove } from './src/methods';
+import { get } from './routes/get';
+import { post } from './routes/post';
+import { put } from './routes/put';
+import { remove } from './routes/remove';
 
 const port = process.env.PORT || 3000;
 
