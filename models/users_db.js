@@ -29,6 +29,6 @@ export const users = [
     id: uuid(),
     username: "Daenerys Targaryen",
     age: 14,
-    hobbies: ["languages learning", "dragon farming"],
+    hobbies: ["languages learning", ""],
   },
 ];

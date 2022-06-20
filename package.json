@@ -26,6 +26,7 @@
     "nodemon": "^2.0.16"
   },
   "dependencies": {
+    "querystring": "^0.2.1",
     "uuid": "^8.3.2"
   }
 }
