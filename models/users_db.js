@@ -1,34 +1,25 @@
 import { v4 as uuid } from "uuid";
 
-export const users = [
-  {
-    id: uuid(),
-    username: "Arya Stark",
-    age: 9,
-    hobbies: ["fighting", "exploration"],
-  },
-  {
-    id: uuid(),
-    username: "Sansa Stark",
-    age: 11,
-    hobbies: ["music", "poetry", "singing", "dansing"],
-  },
-  {
-    id: uuid(),
-    username: "Bran Stark",
-    age: 7,
-    hobbies: ["climbing", "exploration"],
-  },
-  {
-    id: uuid(),
-    username: "Jon Snow",
-    age: 14,
-    hobbies: ["fighting", "horseriding"],
-  },
-  {
-    id: uuid(),
-    username: "Daenerys Targaryen",
-    age: 14,
-    hobbies: ["languages learning", ""],
-  },
-];
+export const users = [];
+
+class User {
+  constructor(username = '', age = 0, hobbies = []) {
+    this.id = uuid();
+    this.username = username;
+    this.age = age;
+    this.hobbies = hobbies;
+  }
+  get() {
+    return {
+      id: this.id,
+      username: this.username,
+      age: this.age,
+      hobbies: this.hobbies
+    };
+  }
+}
+
+export function createUser(username, age, hobbies) {
+  const user = new User(username, age, hobbies);
+  users.push(user);
+}
