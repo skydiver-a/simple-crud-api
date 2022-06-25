@@ -9,14 +9,6 @@ class User {
     this.age = age;
     this.hobbies = hobbies;
   }
-  get() {
-    return {
-      id: this.id,
-      username: this.username,
-      age: this.age,
-      hobbies: this.hobbies
-    };
-  }
 }
 
 export function createUser(username, age, hobbies) {
