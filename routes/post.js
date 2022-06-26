@@ -1,6 +1,6 @@
 // Create = POST
 import { parse } from 'querystring';
-import { createUser } from '../models/users_db.js';
+import { createUser } from  '../models/users_db.js';
 
 export default function post(request, response) {
   let body = '';

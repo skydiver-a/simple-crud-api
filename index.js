@@ -1,10 +1,11 @@
 import http from 'http';
+import dotenv from 'dotenv';
 import get from './routes/get.js';
 import post from './routes/post.js';
 import put from './routes/put.js';
 import remove from './routes/remove.js';
 
-const port = process.env.PORT || 3000;
+const port = dotenv.config().parsed.PORT || 3000;
 
 http.createServer((request, response) => {
   if (request.url.includes('api/users')) {
